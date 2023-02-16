@@ -1,21 +1,15 @@
 {
-  "family": "nodejs-holiday-bot-task",
+  "family": "nodejs-user-management-task",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
-      "name": "nodejs-holiday-bot",
-      "image": "698445805226.dkr.ecr.us-east-2.amazonaws.com/nodejsholidaybot:1.0",
+      "name": "nodejs-user-management",
+      "image": "698445805226.dkr.ecr.us-east-2.amazonaws.com/nodejsusermanagement:1.0",
       "portMappings": [
         {
           "containerPort": 80,
           "hostPort": 80,
           "protocol": "tcp"
-        }
-      ],
-      "secrets": [
-        {
-          "name": "KHITROV_HOLIDAY_BOT_TOKEN",
-          "valueFrom": "arn:aws:ssm:us-east-2:698445805226:parameter/KHITROV_HOLIDAY_BOT_TOKEN"
         }
       ]
     }
