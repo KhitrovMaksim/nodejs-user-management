@@ -1,0 +1,6 @@
+module.exports = {
+  DBUSER: process.env.NODEJS_USER_MANAGEMENT_DB_USER,
+  DBPASSWORD: process.env.NODEJS_USER_MANAGEMENT_DB_PASSWORD,
+  PRETTY_LOGGING: process.env.PRETTY_LOGGING,
+  PORT: process.env.PORT,
+};
