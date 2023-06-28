@@ -1,0 +1,107 @@
+[{
+  "_id": {
+    "$oid": "64861d0111fd5a32b455d8de"
+  },
+  "name": "Max",
+  "age": "37"
+},
+{
+  "_id": {
+    "$oid": "648f39ac3f93cc296c033c8e"
+  },
+  "nickname": "Max",
+  "firstname": "Max",
+  "lastname": "Max",
+  "password": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f39ed840eae9927f1a5d2"
+  },
+  "nickname": "Max1",
+  "firstname": "Max",
+  "lastname": "Max",
+  "password": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f45bdd594e27c780b32c5"
+  },
+  "nickname": "Max2",
+  "firstname": "Max",
+  "lastname": "Max",
+  "password": "508510959bbf9f14726a4700d8fe4ddf",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f460239a706af7e2c2e6a"
+  },
+  "nickname": "Max3",
+  "firstname": "Max",
+  "lastname": "Max",
+  "password": "508510959bbf9f14726a4700d8fe4ddf",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f463e9197b32446de2a16"
+  },
+  "nickname": "Max4",
+  "firstname": "Max",
+  "lastname": "Max",
+  "password": "508510959bbf9f14726a4700d8fe4ddf",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649bf8a6b0b03d7c853916bd"
+  },
+  "nickname": "Sveta1",
+  "firstname": "Sveta1",
+  "lastname": "Sveta1",
+  "password": "b94a96bd44c237ee7b1c58a7b7f8fbee",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649c0c820c4c1411d5f502ea"
+  },
+  "nickname": "Sveta2",
+  "firstname": "Sveta2",
+  "lastname": "Sveta2",
+  "password": "5af82203126da73cb979a9cbe2d12949",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649c0ce0ccd73a5950f216dd"
+  },
+  "nickname": "Sveta3",
+  "firstname": "Sveta3",
+  "lastname": "Sveta3",
+  "password": "a846275bc815c09d3f7ec3893ccbf33f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649c0d75da34c3ed3f837304"
+  },
+  "nickname": "Sveta4",
+  "firstname": "Sveta4",
+  "lastname": "Sveta4",
+  "password": "6a18d70bad8aebc81d4ca0f3f4448554",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649c3279ed5ce23ec11985b7"
+  },
+  "nickname": "Sveta6",
+  "firstname": "Sveta6",
+  "lastname": "Sveta6",
+  "password": "f08140a0487dae4cd32365f6b7cee445",
+  "__v": 0
+}]

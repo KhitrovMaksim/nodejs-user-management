@@ -1,0 +1,27 @@
+@startuml
+participant User   order 10
+participant Server order 30
+database    Mongo  order 40
+activate Server
+activate Mongo
+User -> Server : request: /
+Server --> User: response: redirect to /users
+User -> Server : request: /users
+activate Server
+Server -> Mongo : find all users
+Mongo --> Server : all users
+Server --> User: response: list of users
+deactivate Server
+User -> Server : request: /registration
+activate Server
+Server -> Mongo : save user
+Mongo --> Server : saved user data
+Server --> User: response: new user data
+deactivate Server
+User -> Server : request: /update/nickname
+activate Server
+Server -> Mongo : update user
+Mongo --> Server : updated user data
+Server --> User: response: updated user data
+deactivate Server
+@enduml
