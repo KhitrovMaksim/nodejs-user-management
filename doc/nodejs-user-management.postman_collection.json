@@ -11,7 +11,36 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:3001/users"
+				"url": "http://localhost:5000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get users with params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -37,17 +66,41 @@
 			"name": "Update",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWYwMzczMjcyNTUyOTVlZjFkZWVkYSIsIm5pY2tuYW1lIjoiU3ZldGE3IiwiZmlyc3RuYW1lIjoiTmV3MlN2ZXRhNyIsImxhc3RuYW1lIjoiU3ZldGE3IiwicGFzc3dvcmQiOiI0NDA4YjYwMjE1YzViODU5ZDhmZjU4OWZiNjVjYWZiMSIsImlhdCI6MTY4ODE0Nzg5NCwiZXhwIjoxNjg4MTQ4NDk0fQ.IaYu-cLSXo1bhVVgHyZLXLbLbhiijtweAe398izLQl4",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"password\": \"Sveta1\",\r\n    \"newNickname\": \"Sveta2\",\r\n    \"newFirstname\": \"Sveta2\",\r\n    \"newLastname\": \"Sveta2\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"New4Sveta7\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:3001/update/Sveta1"
+				"url": "http://localhost:5000/update/649f037327255295ef1deeda"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\": \"Sveta7\",\r\n    \"password\": \"Sveta7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/login"
 			},
 			"response": []
 		}

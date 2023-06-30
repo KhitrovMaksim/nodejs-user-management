@@ -1,6 +1,8 @@
 const express = require('express');
 const { check } = require('express-validator');
 const userController = require('../controllers/user.controller');
+const authController = require('../controllers/auth.controller');
+const authMiddleware = require('../middlewares/auth.middleware');
 
 const router = express.Router();
 
@@ -18,10 +20,14 @@ router.post(
   ],
   userController.registration,
 );
-router.put(
-  '/update/:nickname',
-  [check('password', 'Please, enter password.').notEmpty()],
-  userController.update,
+router.post(
+  '/login',
+  [
+    check('nickname', 'Please, enter nickname.').notEmpty(),
+    check('password', 'Please, enter password.').notEmpty(),
+  ],
+  authController.login,
 );
+router.put('/update/:id', authMiddleware, userController.update);
 
 module.exports = router;

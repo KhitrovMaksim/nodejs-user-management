@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const userService = require('../service/user.service');
 const logger = require('../../logger');
+const UserDto = require('../dtos/user.dto');
 
 class UserController {
   async registration(req, res) {
@@ -20,7 +21,9 @@ class UserController {
 
   async getUsers(req, res) {
     try {
-      const users = await userService.getUsers();
+      const page = parseInt(req.query.page, 10);
+      const limit = parseInt(req.query.limit, 10);
+      const users = await userService.getUsers(page, limit);
       return res.json(users);
     } catch (error) {
       logger.error(`Getting users error: ${error}`);
@@ -32,23 +35,16 @@ class UserController {
   async update(req, res) {
     try {
       const errors = validationResult(req);
-
       if (!errors.isEmpty()) {
         return res.json({ message: 'Validation error', errors });
       }
 
-      const { nickname } = req.params;
-      const { password, newNickname, newFirstname, newLastname, newPassword } = req.body;
+      if (req.params.id !== req.user.id) {
+        return res.status(401).json({ message: 'Permission denied', errors });
+      }
 
-      // eslint-disable-next-line max-len
-      const { error, userData } = await userService.update(
-        nickname,
-        password,
-        newNickname,
-        newFirstname,
-        newLastname,
-        newPassword,
-      );
+      const newUserData = new UserDto(req.body);
+      const { error, userData } = await userService.update(req.user.id, newUserData);
 
       if (error) {
         return res.json({ message: error });
